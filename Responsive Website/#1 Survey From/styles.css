@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #EEF0F7;
+  --secondary-color: #2F5782;
+  --text-color: #F6D28A;
+  --accent-color: #443759;
+  --color-green: #37af65;
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  font-weight: bold;
+  padding: 2em;
+}
+
+body {
+  background-image: url(https://i.ibb.co/fGtWt1G/5148212.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-family);
+}
+
+#container {
+  max-width: 720px;
+  min-width: 300px;
+  margin: 1em auto 4em;
+  background-color: var(--primary-color);
+  padding: 1em;
+  line-height: 1.5;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+  overflow: hidden;
+}
+
+fieldset {
+  border: none;
+  padding: 1em 1em;
+}
+
+.input-table {
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  min-height: 2em;
+}
+
+#section-2 table tr p{
+  text-align: center;
+  margin: 1em auto;
+}
+
+label {
+  display: block;
+    margin: 0.5rem 0;
+}
+
+.input-text, .input-file, textarea, select, button {
+  border: #443759 2px solid;
+  width: 96%;
+  color: #443759;
+  margin: 5px 0 10px;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+
+select {
+  width: 100%;
+}
+
+.input-radio {
+  width: auto;
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+  
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  border: hidden;
+  background: var(--color-green);
+  cursor: pointer;
+}

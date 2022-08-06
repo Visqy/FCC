@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discord.py | Documentation</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main-page">
+        <nav id="navbar">
+            <div class="logo-img"><img style="height: 15em" src="https://i.ibb.co/FVsfSVX/snake-dark.png" alt="snake-dark"></div>
+            <header class="center title bold"><a href="#">discord.py</a></header>
+            <ul class="nav-container">
+                <li class="nav-item bold"><a class="nav-link" href="#About">About</a></li>
+                <li class="nav-item bold"><a class="nav-link" href="#Installation">Installation</a></li>
+                <li class="nav-item bold"><a class="nav-link" href="#Basic_Concepts">Basic Concepts</a></li>
+                <li class="nav-item bold"><a class="nav-link" href="#Links">Links</a></li>
+                <li class="nav-item bold"><a class="nav-link" href="#Help">Help</a></li>
+                <li class="nav-item bold"><a class="nav-link" href="#Reference">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <div class="logo-img"><img src="https://i.ibb.co/FVsfSVX/snake-dark.png" alt="snake-dark"></div>
+            <section id="About" class="main-section">
+                <header id="About" class="title bold">About</header>
+                <p>discord.py is a modern, easy to use, feature-rich, and async ready API wrapper for Discord.</p>
+                <p class="bold">Feature:</p>
+                <ul>
+                    <li>Modern Pythonic API using async/await syntax</li>
+                    <li>Sane rate limit handling that prevents 429s</li>
+                    <li>Implements the entire Discord API</li>
+                    <li>Command extension to aid with bot creation</li>
+                    <li>Easy to use with an object oriented design</li>
+                    <li>Optimised for both speed and memory</li>
+                </ul>
+            </section>
+            <section id="Installation" class="main-section">
+                <header id="Installation" class="title bold">Installation</header>
+                <p>Python 3.5.3 or newer is required.</p>
+                <p>You can get the library directly from PyPI:</p>
+                <pre class="code"><code>python3 -m pip install -U discord.py</code></pre>
+                <p>If you are using Windows, then the following should be used instead:</p>
+                <pre class="code"><code>py -3 -m pip install -U discord.py</code></pre>
+                <p class="bold">Optional packages</p>
+                <ul>
+                    <li>discord.py[voice] for interacting with the Discord Voice API 
+                    </li>
+                </ul>
+                <pre class="code"><code>python3 -m pip install -U discord.py[voice]</code></pre>
+                <p>On Linux environments, installing voice requires getting the following dependencies:</p>
+                <ul class="point">
+                    <li><a href="https://github.com/libffi/libffi">libffi<span class="link-logo"></span></a></li>                        
+                    <li><a href="https://github.com/saltstack/libnacl">libnacl<span class="link-logo"></span></a></li>
+                    <li><a href="https://packages.debian.org/python3-dev">python3-dev<span class="link-logo"></span></a></li>
+                </ul>
+                <p>For a Debian-based system, the following command will get these dependencies:</p>
+                <pre class="code"><code>$ apt install libffi-dev libnacl-dev python3-dev</code></pre>
+            </section>
+            <section id="Basic_Concepts" class="main-section">
+                <header id="Basic_Concepts" class="title bold">Basic Concepts</header>
+                <p>discord.py revolves around the concept of events. An event is something you listen to and then respond to. For example, when a message happens, you will receive an event about it that you can respond to.</p>
+                <p>A quick example to showcase how events work:</p>
+                <pre class="code"><code>import discord
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged on as {0}!'.format(self.user))
+                            
+    async def on_message(self, message):
+        print('Message from {0.author}: {0.content}'.format(message))
+                        
+client = MyClient()
+client.run('my token goes here')
+                </code></pre>
+            </section>
+            <section id="Links" class="main-section">
+                <header id="Links" class="title bold">Links</header>
+                <ul>
+                    <li><a href="https://discordpy.readthedocs.io/">Website (source)<span class="link-logo"></span></a></li>
+                    <li><a href="https://discordpy.readthedocs.io/">Documentation<span class="link-logo"></span></a></li>
+                    <li><a href="https://discord.gg/r3sSKJJ">discord.py Discord server<span class="link-logo"></span></a></li>
+                    <li><a href="https://discord.gg/discord-api">Discord API Discord server<span class="link-logo"></span></a></li>
+                    <li><a href="https://github.com/Rapptz/discord.py">GitHub<span class="link-logo"></span></a></li>
+                    <li><a href="https://pypi.org/project/discord.py/">PyPI<span class="link-logo"></span></a></li>
+                    <li><a href="https://discord.com/developers/docs/topics/community-resources#libraries">Related libraries<span class="link-logo"></span></a></li>
+                </ul>
+            </section>
+            <section id="Help" class="main-section">
+                <header id="Help" class="title bold">Help</header>
+                <p>If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle nudge in the right direction, please don't hesitate to join our official <a href="https://discord.gg/r3sSKJJ">discord.py<span class="link-logo"></span></a> Server or Ask in our <a href="https://github.com/Rapptz/discord.py/discussions">GitHub discussions page.<span class="link-logo"></span></a>.</p>
+            </section>
+            </section>
+            <section id="Reference" class="main-section">
+                <header id="Reference" class="title bold">Reference</header>
+                <ul>
+                    <li>All the documentation in this page is taken from <a href="https://discordpy.readthedocs.io/">discord.py Documentation<span class="link-logo"></span></a></li>
+                    <li>All the design in this page is inspired by <a href="https://discord.js.org/#/docs">discord.js Documentation<span class="link-logo"></span></a></li>
+                </ul>
+            </section>
+            <span class="gap"></span>
+        </main>
+    </div>
+    <footer>
+        <p class="center bold title">discord.py</p>
+        <p>A powerful library for interacting with the Discord API</p>
+        <span class="gap"></span>
+        <p>300+ contributors</p>
+        <p>11,017+ stars</p>
+        <span class="gap"></span>
+    </footer>
+</body>
+</html>

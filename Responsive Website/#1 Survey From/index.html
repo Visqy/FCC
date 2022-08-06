@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Survey Form</title>
+	    <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Product Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the product</p>
+        </header>
+        <div id="container">
+            <form id="survey-form">
+                <fieldset>
+                    <label id="name-label">Name<input class="input-text" type="text" id="name" name="name" placeholder="Enter your Name" required /></label>
+                    <label id="email-label">Email<input class="input-text" type="email" id="email" name="email" placeholder="Enter your Email" required /></label>
+                    <label id="number-label">Age<input class="input-text" type="number" id="number" name="number" min="0" max="100" placeholder="Age" required /></label>
+                    <label>What product did you buy?
+                        <select id="dropdown" name="product">
+                            <option value="">(select one)</option>
+                            <option value="1">Notebook</option>
+                            <option value="2">Tablet</option>
+                            <option value="3">Phone</option>
+                            <option value="3">Accessories</option>
+                            <option value="4">Other</option>
+                        </select>
+                        <label>Upload your Purhcase invoice <input class="input-file" type="file" name="file" /></label>
+                </fieldset>
+                <fieldset id="section-2">
+                    <p>How important was performance on these attributes?</p>
+                        <table>
+                            <tr>
+                                <td></td>
+                                <td><p>Miserably</p></td>
+                                <td><p>Somewhat Satisfactory</p></td>
+                                <td><p>Very Satisfactory</p></td>
+                                <td><p>Delighfully</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Overall quality</p></td>
+                                <td><input name="product-attributes-1" value="1" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-1" value="2" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-1" value="3" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-1" value="4" type="radio" class="input-table"/></td>  
+                            </tr>
+                            <tr>
+                                <td><p>Value</p></td>
+                                <td><input name="product-attributes-2" value="1" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-2" value="2" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-2" value="3" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-2" value="4" type="radio" class="input-table"/></td>  
+                            </tr>
+                            <tr>
+                                <td><p>Purchase experience</p></td>
+                                <td><input name="product-attributes-3" value="1" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-3" value="2" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-3" value="3" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-3" value="4" type="radio" class="input-table"/></td>  
+                            </tr>
+                            <tr>
+                                <td><p>Installation of first use experience</p></td>
+                                <td><input name="product-attributes-4" value="1" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-4" value="2" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-4" value="3" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-4" value="4" type="radio" class="input-table"/></td>  
+                            </tr>
+                            <tr>
+                                <td><p>Usage experience</p></td>
+                                <td><input name="product-attributes-5" value="1" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-5" value="2" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-5" value="3" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-5" value="4" type="radio" class="input-table"/></td>  
+                            </tr>
+                            <tr>
+                                <td><p>After purchase service (warranty, repair, customer service, etc.)</p></td>
+                                <td><input name="product-attributes-6" value="1" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-6" value="2" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-6" value="3" type="radio" class="input-table"/></td>
+                                <td><input name="product-attributes-6" value="4" type="radio" class="input-table"/></td>  
+                            </tr>
+                        </table>
+            </fieldset>
+            <fieldset>
+                    <p>Have you ever contacted customer service?</p>
+                    <label><input name="customer-service" value="1" type="radio" class="input-radio"/>Yes</label>
+                    <label><input name="customer-service" value="0" type="radio" class="input-radio"/>No</label>
+            </fieldset>
+            <fieldset>
+                    <p>If you contacted customer service, have all problem been resolved to your complete satisfaction?</p>
+                    <label><input name="problem" value="3" type="radio" class="input-radio"/>Yes, by the company or its representatives</label>
+                    <label><input name="problem" value="2" type="radio" class="input-radio"/>Yes, by me or someone outside the company</label>
+                    <label><input name="problem" value="1" type="radio" class="input-radio"/>No, the problem was not resolved</label>
+            </fieldset>
+            <fieldset>
+                    <label>Any suggestions and feedback<textarea name="feedback" rows="3" cols="30" placeholder="I like this product..."></textarea></label>
+                    <label>
+                        <input type="checkbox" name="terms" value="1" required /> I accept the <a href="">terms and conditions</a> for Gift Vouchers
+                    </label>
+                    <label>
+                        <input type="checkbox" name="update" value="1" required /> Automatically send an email update
+                    </label>
+            </fieldset>
+                <input id="submit" type="submit" value="Claim your Gift Vouchers" />
+        </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #fbfbfb;
+    --text-color: #4b4453;
+    --paragraft-color: #999;
+    --blue: #4f51ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+}
+
+.bold {
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.btn {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    min-width: 5rem;
+    /* width: 8rem; */
+    background-color: var(--blue);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 2px 0;
+    cursor: pointer;
+    line-height: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #1366d6;
+    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+}
+  
+  .btn:hover:after {
+    opacity: .5;
+}
+
+input {
+    border: 1px solid var(--text-color);
+    margin: 5px 0 10px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--paragraft-color);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    padding: 10px;
+    top:0;
+    background-color: var(--primary-color);
+}
+
+.img-fit {
+    height: 100%;
+    object-fit: cover;
+}
+
+.img {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.nav-icon {
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#main-content {
+    margin-top: 5rem;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 2rem;
+}
+
+#products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "product product product"
+    ;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem; 
+}
+
+.content {
+    padding: 0 1rem;
+}
+
+.content p {
+    color: var(--paragraft-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+.content header {
+    margin-bottom: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 2px 0;
+}
+
+.card header {
+    margin: 0.8rem 0;
+}
+
+.card p {
+    color: var(--paragraft-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+    object-fit: cover;
+    margin: 0;
+}
+
+
+
+#product-title {
+    grid-area: header;
+}
+
+#how {
+    display:flex;
+    justify-content: center;
+    padding: 2rem;
+    height: 10rem;
+    position: relative;
+    min-height: 500px;
+}
+
+iframe {
+    width: 100%;
+    position: relative; 
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 2rem;
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--primary-color);
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.gap-y {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+    #products {
+        grid-template-areas:
+        "header"
+        "product"
+        ;
+    }
+    #nav-bar {
+        display: none;
+    }
+    .card {
+        max-width: 400px;
+    }
+    #contact, #home {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+    }
+    #home .container {
+        grid-row: -1;
+    }
+
+}
